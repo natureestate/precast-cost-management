@@ -9,6 +9,7 @@ import projects from './routes/projects';
 import costs from './routes/costs';
 import upload from './routes/upload';
 import query from './routes/query';
+import analytics from './routes/analytics';
 
 const app = new Hono<{ Bindings: Env }>();
 
@@ -46,6 +47,7 @@ app.route('/api/projects', projects);
 app.route('/api/costs', costs);
 app.route('/api/documents', upload);
 app.route('/api/query', query);
+app.route('/api/analytics', analytics);
 
 // 404 handler
 app.notFound((c) => {
